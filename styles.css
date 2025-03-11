@@ -1,0 +1,497 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+/* Set the base font and height for the body */
+body {
+    
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+.dark-mode .right-section {
+    background: #292929;
+}
+.dark-mode .left-section {
+    background: linear-gradient(to right, #885c5c, #292929);
+    
+}
+.dark-mode .navbar, .dark-mode .side-container {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .nav-links a {
+    color: #ffffff;
+}
+
+.dark-mode .btn {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.dark-mode .cv-button {
+    background: linear-gradient(to bottom, #333, #555);
+    color: #ffffff;
+}
+
+.dark-mode .contact-button {
+    background: transparent;
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.dark-mode .contact-button:hover {
+    background: #ffffff;
+    color: #121212;
+}
+.dark-mode .social-icons a{
+    color:#e0b7f3;
+}
+.dark-mode .home-content p{
+    color:#f1def9;
+}
+
+.dark-mode .home-content h1{
+    color:#e0b7f3;
+}
+.dark-mode .home-content h2{
+    color:#f1def9;
+}
+.dark-mode .fa {
+    
+    color: #e0b7f3; /* Icon color */
+}
+/* Styling for the home page container */
+.home-page {
+    height: 100vh; /* Full viewport height */
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 10vh; /* 10% of the viewport height */
+}
+
+/* Styling for the navigation links */
+.nav-links {
+    gap: 3rem; /* Space between links */
+    font-size: 1.5rem;
+    display: flex;
+    list-style: none; /* Remove bullet points */
+}
+
+/* Styling for anchor tags inside nav-links */
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease, font-size 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for navigation links */
+.nav-links a:hover {
+    color: rgb(60, 60, 60); /* Darker color on hover */
+    text-decoration: underline;
+    text-decoration-color: rgb(37, 37, 37); /* Underline color */
+    text-underline-offset: 10px; /* Space between text and underline */
+}
+
+/* Styling for the logo */
+.logo {
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+/* HOME PAGE BODY STYLING */
+
+/* Container for the home section */
+.home-section {
+    width: 100%;
+    height: 90vh; /* 90% of the viewport height */
+    display: flex;
+    position: relative;
+}
+
+/* Left section of the home page */
+.left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(255, 254, 254); /* White background */
+    flex: 7; /* Takes 7 parts of the available space */
+}
+
+/* Right section of the home page */
+.right-section {
+    background: linear-gradient(to bottom, #ffebdb, #e0b7f3); /* Gradient background */
+    flex: 3; /* Takes 3 parts of the available space */
+}
+
+/* Styling for the profile image */
+.profile-image {
+    bottom: -100%; /* Start below the viewport */
+    right: 14%;
+    position: absolute;
+    width: 500px;
+    opacity: 0; /* Start with invisible image */
+    animation: slideUp 0.8s ease-out forwards; /* Apply animation */
+    animation-delay: 0.5s; /* Delay the animation (reduced for quicker appearance) */
+}
+
+/* Styling for the home content paragraph */
+.home-content p {
+    font-size: 30px;
+    text-align: center;
+    opacity: 0; /* Start with invisible text */
+    transform: translateY(-20px); /* Start slightly above */
+    animation: fadeInUp 0.8s ease-out forwards; /* Apply animation */
+    animation-delay: 0.3s; /* Delay the animation */
+}
+
+/* Styling for the home content heading (h1) */
+.home-content h1 {
+    font-size: 50px;
+    opacity: 0; /* Start with invisible text */
+    transform: translateY(-20px); /* Start slightly above */
+    animation: fadeInUp 0.8s ease-out forwards; /* Apply animation */
+    animation-delay: 0.5s; /* Delay the animation */
+}
+
+/* Styling for the home content subheading (h2) */
+.home-content h2 {
+    font-size: 1.75rem;
+    text-align: center;
+    font-weight: 600;
+    color: rgb(67, 67, 67); /* Dark gray color */
+    opacity: 0; /* Start with invisible text */
+    transform: translateY(-20px); /* Start slightly above */
+    animation: fadeInUp 0.8s ease-out forwards; /* Apply animation */
+    animation-delay: 0.7s; /* Delay the animation */
+}
+
+/* Container for the home buttons */
+.home-buttons {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Space between buttons */
+}
+
+/* Base styling for buttons */
+.btn {
+    text-align: center;
+    font-size: 1em;
+    font-weight: 500;
+    transition: all 300ms ease; /* Smooth transition for hover effects */
+    padding: 1rem;
+    width: 9rem;
+    border-radius: 2rem; /* Rounded corners */
+    border: 1px solid black;
+    opacity: 0; /* Start with invisible buttons */
+    transform: translateY(-20px); /* Start slightly above */
+    animation: fadeInUp 0.8s ease-out forwards; /* Apply animation */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Specific styling for the CV button */
+.cv-button {
+    border: none;
+    background: linear-gradient(to bottom, #ffebdb, #e0b7f3); /* Gradient background */
+    color: black;
+    animation-delay: 0.9s; /* Delay the animation */
+}
+
+/* Hover effect for the CV button */
+.cv-button:hover {
+    background: linear-gradient(to bottom, #e0b7f3, #ffebdb); /* Reverse gradient on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Specific styling for the Contact Me button */
+.contact-button {
+    animation-delay: 1.1s; /* Delay the animation */
+    background: transparent; /* Transparent background */
+    border: 1px solid black; /* Black border */
+}
+
+/* Hover effect for the Contact Me button */
+.contact-button:hover {
+    background: black; /* Black background on hover */
+    color: white; /* White text on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Styling for the side container (vertical icon bar) */
+.side-container {
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    border-radius: 15px; /* Rounded corners */
+    margin-left: 1rem;
+    z-index: 1000; /* Ensure it stays above other elements */
+    width: 2.5vw; /* Width relative to viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Vertical alignment */
+    position: fixed;
+    left: 0;
+    top: 15%; /* Position from the top */
+    padding: 10px 5px;
+}
+
+/* Styling for Font Awesome icons */
+.fa {
+    font-size: 22px;
+    margin: 1rem;
+    color: #2a2a2a; /* Icon color */
+}
+
+/* Styling for individual side icons */
+.side-icon {
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+/* Hover effect for side icons */
+.side-icon:hover {
+    background-color: rgb(255, 196, 196); /* Light red background on hover */
+}
+
+/* SOCIAL ICONS STYLING */
+
+/* Container for social media icons */
+.social-icons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Space between icons */
+}
+
+/* Styling for social media icon links */
+.social-icons a {
+    font-size: 30px;
+    color: #333; /* Default icon color */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out; /* Smooth hover effect */
+    opacity: 0; /* Start with invisible icons */
+    transform: translateY(-20px); /* Start slightly above */
+    animation: fadeInUp 0.8s ease-out forwards; /* Apply animation */
+}
+
+/* Delay for social icons */
+.social-icons a:nth-child(1) { animation-delay: 1.3s; }
+.social-icons a:nth-child(2) { animation-delay: 1.4s; }
+.social-icons a:nth-child(3) { animation-delay: 1.5s; }
+.social-icons a:nth-child(4) { animation-delay: 1.6s; }
+.social-icons a:nth-child(5) { animation-delay: 1.7s; }
+
+/* Hover effect for social media icons */
+.social-icons a:hover {
+    color: #0073e6; /* Blue color on hover */
+}
+
+/* Keyframes for the fadeInUp animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframes for the slideUp animation */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        bottom: -100%;
+    }
+    to {
+        opacity: 1;
+        bottom: 0;
+    }
+}
+
+/* Scroll-to-Top Button */
+.scroll-to-top {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    background-color: #005bb5;
+}
+
+/* Loading Animation */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #0073e6;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Footer Styling */
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.dark-mode footer {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    
+    /* Base styles for the navbar */
+/* Base styles for the navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    height: auto;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: inline-block; /* Ensure inline display */
+  }
+  
+  /* Mobile menu styling */
+  .nav-links {
+    display: none; /* Hide navigation links by default on mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+  
+  .nav-links.active {
+    display: flex; /* Show menu when active class is applied */
+  }
+  
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #444;
+  }
+  
+  .nav-links li:last-child {
+    border-bottom: none;
+  }
+  
+  .nav-links a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    background-color: #444;
+  }
+  
+  /* Hamburger menu styling */
+  .menu-bar {
+    display: inline-block; /* Ensure inline display */
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+  
+  /* Add JavaScript to toggle the menu */
+
+
+
+   .home-section{
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+   }
+
+  .right-section{
+    display: none;
+  }
+
+   .profile-pic-section{
+    
+     overflow: hidden;
+   }
+  .profile-image{
+    position: static;
+  }
+
+ 
+    
+}
