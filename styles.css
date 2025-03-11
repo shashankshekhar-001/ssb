@@ -4,7 +4,9 @@
     padding: 0;
     text-decoration: none;
 }
-
+html{
+    overflow-x:hidden;
+}
 /* Set the base font and height for the body */
 body {
     
