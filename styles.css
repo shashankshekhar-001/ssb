@@ -1,13 +1,13 @@
 /* Reset default margin and padding for all elements */
 * {
-     overflow-x:hidden;
     margin: 0;
     padding: 0;
     text-decoration: none;
 }
-html{
-   
+ body ,html{
+    overflow-x: hidden;
 }
+
 /* Set the base font and height for the body */
 body {
     
@@ -399,7 +399,6 @@ footer {
 
 
 @media screen and (max-width: 768px) {
-    
     /* Base styles for the navbar */
 /* Base styles for the navbar */
 .navbar {
@@ -488,11 +487,12 @@ footer {
   }
 
    .profile-pic-section{
-    
+     height:50vh;
      overflow: hidden;
    }
   .profile-image{
     position: static;
+    border: 2px solid black;
   }
 
  
